@@ -58,22 +58,38 @@ async def start_private(client: Client, message: Message):
 
 
 @Client.on_message(
-    command(["mstart", f"mstart@{BOT_USERNAME}"]) & filters.group & ~filters.edited
+
+    command(["start", f"start@{BOT_USERNAME}"]) & filters.group & ~filters.edited
+
 )
+
 async def start_group(client: Client, message: Message):
+
     current_time = datetime.utcnow()
+
     uptime_sec = (current_time - START_TIME).total_seconds()
+
     uptime = await _human_time_duration(int(uptime_sec))
 
     keyboard = InlineKeyboardMarkup(
 
-            [[InlineKeyboardButton(text="🌙ʙᴀꜱɪᴄ ʜᴇʟᴘ", url=f"https://t.me/{GROUP_SUPPORT}")]]
+        [
 
-        ),
+            [
+
+                InlineKeyboardButton("✨ Group", url=f"https://t.me/{GROUP_SUPPORT}"),
+
+                InlineKeyboardButton(
+
+                    "📣 Channel", url=f"https://t.me/{UPDATES_CHANNEL}"
+
+                ),
+
+            ]
+
+        ]
 
     )
-        
-            
                
                
             
