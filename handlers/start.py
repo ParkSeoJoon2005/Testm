@@ -66,13 +66,19 @@ async def start_group(client: Client, message: Message):
     uptime = await _human_time_duration(int(uptime_sec))
 
     keyboard = InlineKeyboardMarkup(
-        [
-            [
-                InlineKeyboardButton("ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP_SUPPORT}"),
-               
-            ]
-        ]
+
+            [[InlineKeyboardButton(text="🌙ʙᴀꜱɪᴄ ʜᴇʟᴘ", url=f"https://t.me/{GROUP_SUPPORT}")]]
+
+        ),
+
     )
+        
+            
+               
+               
+            
+       
+    
 
     alive = f"**ђєɭɭ๏{message.from_user.mention()}, I'm{BOT_NAME}**\n\n◉**I'm Online!**\n ◉ᴍᴀꜱᴛᴇʀ:`ᴛʜᴇ ᴀᴜʀᴏʀᴀ ᴘʀᴏᴊᴇᴄᴛ`\n◉ᴠᴇʀꜱɪᴏɴ: `v{__version__}`\n ◉ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀꜱɪᴏɴ: `{pyrover}`\n◉ᴘʏᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ: `{__python_version__}`\n◉ᴍᴏɴɢᴏ ᴅᴀᴛᴀʙᴀꜱᴇ:´ᴡᴏʀᴋɪɴɢ´ \n◉ᴜᴘᴛɪᴍᴇ: `{uptime}`Aurora❤"
 
